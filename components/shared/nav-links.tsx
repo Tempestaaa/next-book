@@ -14,7 +14,7 @@ export default function NavLinks() {
         <Link
           key={item.href}
           href={item.href}
-          className={`capitalize px-8 py-2 h-full relative duration-300 ${
+          className={`capitalize px-4 py-2 h-full relative duration-300 ${
             active(item.href) &&
             "font-bold after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-[20%] after:bg-foreground after:duration-300"
           }`}

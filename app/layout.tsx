@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${defaultFont.className} antialiased`}>
         <Navbar />
         <div />
-        <main className="container mx-auto py-[64px] h-full">{children}</main>
+        <main className="h-full pb-16">{children}</main>
       </body>
     </html>
   );

@@ -8,9 +8,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 h-16 bg-transparent border-b-2`}
-    >
+    <header className={`fixed top-0 left-0 right-0 h-16 bg-transparent`}>
       <nav className="container mx-auto flex items-center justify-between h-full">
         <section className="flex items-center gap-8">
           <Logo />
