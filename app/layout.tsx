@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar";
+import Footer from "@/components/shared/footer";
 
 const defaultFont = Roboto_Condensed({ subsets: ["latin"] });
 
@@ -19,8 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${defaultFont.className} antialiased`}>
         <Navbar />
-        <div />
-        <main className="h-full pb-16">{children}</main>
+        <main className="">{children}</main>
+        <Footer />
       </body>
     </html>
   );
