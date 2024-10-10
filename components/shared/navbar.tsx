@@ -5,7 +5,7 @@ import NavLinks from "@/components/shared/nav-links";
 import SignInButton from "@/components/shared/sign-in-button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { SearchIcon, ShoppingBagIcon } from "lucide-react";
+import { SearchIcon, ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>
 
           <Link href="/cart">
-            <ShoppingBagIcon size={18} />
+            <ShoppingCartIcon size={18} />
           </Link>
 
           <Separator

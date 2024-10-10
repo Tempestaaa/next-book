@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingBagIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   length: number;
@@ -11,21 +12,25 @@ export default function BookList({ length }: Props) {
     <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-6">
       {[...Array(length)].map((_, i) => (
         <div key={i} className="space-y-2">
-          <div className="overflow-hidden">
-            <Image
-              src="/test-image.jpg"
-              alt="testing image"
-              width={400}
-              height={400}
-              className="hover:scale-110 duration-300 transition-transform"
-            />
-          </div>
+          <Link href={`/books/${i}`}>
+            <div className="overflow-hidden">
+              <Image
+                src="/test-image.jpg"
+                alt="testing image"
+                width={400}
+                height={400}
+                className="hover:scale-110 duration-300 transition-transform"
+              />
+            </div>
+          </Link>
 
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 justify-between items-end">
-              <h1 className="text-lg font-semibold">
-                This is book's title {i + 1}
-              </h1>
+              <Link href={`/books/${i}`}>
+                <h1 className="text-lg font-semibold">
+                  This is book's title {i + 1}
+                </h1>
+              </Link>
               <p className="text-2xl font-bold">$25.99</p>
             </div>
             <p className="text-foreground/50">by Author</p>

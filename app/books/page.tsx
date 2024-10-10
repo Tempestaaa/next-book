@@ -22,10 +22,11 @@ import { FilterIcon } from "lucide-react";
 
 export default function BooksPage() {
   return (
-    <section className="h-full pt-16">
+    <section className="h-full pt-20">
       <div className="container mx-auto flex flex-col gap-8">
         {/* Breadcrumb */}
-        <Breadcrumb className="mt-4">
+        {/* TODO: Turn into component */}
+        <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -51,6 +52,7 @@ export default function BooksPage() {
         </div>
 
         {/* Pagination */}
+        {/* TODO: Turn into component */}
         <Pagination className="mt-4">
           <PaginationContent>
             <PaginationItem>
