@@ -6,20 +6,22 @@ import {
   FacebookIcon,
   GithubIcon,
   InstagramIcon,
+  MailIcon,
+  PhoneCallIcon,
   SendIcon,
 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-amber-50 py-10">
+    <footer className="py-10">
       <div className="container mx-auto grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-8">
         {/* Logo */}
         <section>
           <Logo />
         </section>
 
-        {/*  */}
-        <section className="space-y-4">
+        {/* Socials links */}
+        <section className="space-y-2">
           <h1 className="text-xl font-bold">Socials</h1>
           <div className="flex gap-4">
             <Button size="icon" className="rounded-full text-background">
@@ -34,18 +36,23 @@ export default function Footer() {
           </div>
         </section>
 
-        {/*  */}
-        <section>
-          <form className="space-y-2">
-            <Label className="space-y-1">
+        {/* Contacts */}
+        <section className="flex-1 space-y-2">
+          <h1 className="text-xl font-bold">Contacts</h1>
+          <div className="flex items-center gap-4 justify-between *:flex-1">
+            <div className="flex items-center gap-2">
+              <MailIcon size={16} />
               <span>Email</span>
-              <Input placeholder="Email me" />
-            </Label>
-            <Button className="flex items-center gap-2">
-              <SendIcon size={16} />
-              <span>Send</span>
-            </Button>
-          </form>
+            </div>
+            <p>tantrungnguyen2001@gmail.com</p>
+          </div>
+          <div className="flex items-center gap-4 justify-between *:flex-1">
+            <div className="flex items-center gap-2">
+              <PhoneCallIcon size={16} />
+              <span>Phone</span>
+            </div>
+            <p>0123456789</p>
+          </div>
         </section>
       </div>
     </footer>
