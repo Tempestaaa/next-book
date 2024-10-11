@@ -6,10 +6,6 @@ export const navLinks: tNavLink[] = [
     href: "/books",
   },
   {
-    name: "genres",
-    href: "/genres",
-  },
-  {
     name: "blog",
     href: "/blog",
   },

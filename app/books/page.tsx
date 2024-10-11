@@ -1,3 +1,4 @@
+import FilterModal from "@/app/books/_components/filter-modal";
 import BookList from "@/components/shared/book-list";
 import Header from "@/components/shared/header";
 import {
@@ -8,7 +9,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -18,7 +18,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { FilterIcon } from "lucide-react";
 
 export default function BooksPage() {
   return (
@@ -41,9 +40,7 @@ export default function BooksPage() {
         {/* Heading & Filters */}
         <div className="flex items-center gap-4 justify-between">
           <Header title="All the books are here to explore" />
-          <Button size="icon" className="rounded-full p-2">
-            <FilterIcon />
-          </Button>
+          <FilterModal />
         </div>
 
         {/* Books list */}

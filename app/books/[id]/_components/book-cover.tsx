@@ -9,21 +9,21 @@ export default function BookCover() {
         <Image
           src="/test-image.jpg"
           alt="testing image"
-          width={250}
+          width={400}
           height={400}
         />
       </figure>
 
-      <div className="space-y-2">
+      <div className="flex flex-col gap-4 mt-4 items-stretch w-full">
         <Button
           variant="destructive"
-          className="rounded-none px-10 h-12 text-base font-normal mt-6 flex items-center gap-2 w-[250px]"
+          className="rounded-none h-12 text-base font-normal flex items-center gap-2"
         >
           <span>Favourites</span>
           <HeartIcon size={16} fill="#fff" />
         </Button>
 
-        <Button className="rounded-none px-10 h-12 text-base font-normal mt-6 flex items-center gap-2 w-[250px]">
+        <Button className="rounded-none h-12 text-base font-normal flex items-center gap-2">
           <span>Add</span>
           <ShoppingBagIcon size={16} />
         </Button>
