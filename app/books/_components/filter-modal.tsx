@@ -33,7 +33,10 @@ export default function FilterModal() {
 
             <DialogDescription className="grid grid-cols-3 gap-3">
               {mock_genres.map((item) => (
-                <Label className="flex items-center gap-2">
+                <Label
+                  key={item}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <Input
                     type="checkbox"
                     name="genre"

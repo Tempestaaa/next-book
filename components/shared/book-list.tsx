@@ -19,6 +19,7 @@ export default function BookList({ length }: Props) {
                 alt="testing image"
                 width={400}
                 height={400}
+                priority
                 className="hover:scale-110 duration-300 transition-transform"
               />
             </div>
