@@ -1,6 +1,7 @@
 import BookCover from "@/app/books/[id]/_components/book-cover";
 import BookDetails from "@/app/books/[id]/_components/book-details";
 import Reviews from "@/app/books/[id]/_components/reviews";
+import WrittingReview from "@/app/books/[id]/_components/writting-review";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -38,6 +39,8 @@ export default function BookDetailsPage() {
           {/* Book's details & reviews */}
           <div className="flex-1 h-full">
             <BookDetails />
+            <Separator className="my-4" />
+            <WrittingReview />
             <Separator className="my-4" />
             <Reviews />
           </div>

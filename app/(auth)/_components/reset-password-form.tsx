@@ -11,15 +11,21 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { ResetPasswordSchema } from "@/schemas";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function ResetPasswordForm() {
-  const form = useForm();
+  const form = useForm<z.infer<typeof ResetPasswordSchema>>({
+    resolver: zodResolver(ResetPasswordSchema),
+    defaultValues: { email: "" },
+  });
 
   return (
     <CardWrapper
-      title="Reset password"
-      desc="Forget your password"
+      title="Forget your password"
+      desc="Reset password"
       changePageHref="/sign-in"
       changePageTitle="Back to sign in"
     >

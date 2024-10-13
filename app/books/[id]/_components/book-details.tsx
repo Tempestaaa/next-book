@@ -1,3 +1,4 @@
+import Subheading from "@/app/books/[id]/_components/subheading";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { mock_description, mock_genres } from "@/lib/placeholders";
@@ -56,9 +57,7 @@ export default function BookDetails() {
 
       {/* More information */}
       <div className="text-sm">
-        <h3 className="text-xl font-semibold border-b-2 border-foreground w-fit mb-2">
-          More information
-        </h3>
+        <Subheading title="More information" />
         <div className="flex items-center gap-4 justify-between *:flex-1 hover:bg-secondary duration-300 py-2 px-4">
           <p>Original title</p>
           <p>This is the book's original title</p>

@@ -34,3 +34,5 @@ export const SignUpSchema = UserSchema.pick({
     message: "Passwords do not match",
     path: ["confirm"],
   });
+
+export const ResetPasswordSchema = UserSchema.pick({ email: true });

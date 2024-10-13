@@ -12,10 +12,19 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { SignInSchema } from "@/schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 export default function SignInForm() {
-  const form = useForm();
+  const form = useForm<z.infer<typeof SignInSchema>>({
+    resolver: zodResolver(SignInSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
   return (
     <CardWrapper

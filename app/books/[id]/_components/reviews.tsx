@@ -1,3 +1,4 @@
+import Subheading from "@/app/books/[id]/_components/subheading";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Pagination,
@@ -14,11 +15,9 @@ import React from "react";
 
 export default function Reviews() {
   return (
-    <section className="px-4 py-2 bg-background text-foreground rounded-md">
+    <section className="bg-background text-foreground rounded-md">
       <div className="flex gap-4 items-center">
-        <h1 className="text-xl font-bold border-b-2 border-foreground">
-          Reviews
-        </h1>
+        <Subheading title="Reviews" />
         <div className="flex items-center gap-1">
           <MessageSquareTextIcon size={14} />
           <span>5</span>
@@ -27,7 +26,10 @@ export default function Reviews() {
 
       <div className="">
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="my-4 flex gap-4">
+          <div
+            key={i}
+            className="my-4 flex gap-4 hover:bg-secondary p-2 rounded-md duration-300"
+          >
             <Avatar>
               <AvatarImage src="/user-profile.jpg" alt="user image" />
               <AvatarFallback>TT</AvatarFallback>
